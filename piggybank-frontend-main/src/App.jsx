@@ -36,7 +36,7 @@ function App() {
           </ul>
         </nav>
         <div className="app__logout">
-          {isLoggedIn()?<button onClick={logoutClicked}>Uitloggen</button>:<></>}
+          {isLoggedIn()?<button className="app__logout" onClick={logoutClicked}>Uitloggen</button>:<></>}
         </div>
       </div>
       <main>

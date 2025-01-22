@@ -134,6 +134,7 @@ function Transfer() {
                             <select
                                 required
                                 name="toaccount"
+                                className="to-account"
                                 value={receiverAccountId}
                                 onChange={(e) => setReceiverAccountId(e.target.value)}>
 
@@ -199,7 +200,7 @@ function Transfer() {
 
                     {/* Submit form */}
                     <div className="form-row">
-                        <button type="submit">Overboeken</button>
+                        <button data-test-id='overboeken-button' type="submit">Overboeken</button>
                     </div>
                 </form>
             </div>
