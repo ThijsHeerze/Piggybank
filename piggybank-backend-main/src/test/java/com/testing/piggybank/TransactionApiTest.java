@@ -22,6 +22,7 @@ public class TransactionApiTest {
 
     @Test
     public void testGetTransactions() {
+        // Ophalen van transacties voor een specifiek account.
         ResponseEntity<GetTransactionsResponse> response = restTemplate
                 .getForEntity("/api/v1/transactions/1", GetTransactionsResponse.class);
 
@@ -31,6 +32,7 @@ public class TransactionApiTest {
 
     @Test
     public void test_createTransaction_responseOk() {
+        // Aanmaken van een nieuwe transactie met een geldige payload.
         CreateTransactionRequest createTransactionRequest = new CreateTransactionRequest();
         createTransactionRequest.setAmount(new BigDecimal(100));
         createTransactionRequest.setReceiverAccountId(2L);
